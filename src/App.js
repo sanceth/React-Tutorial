@@ -14,6 +14,7 @@ import StyleSheet from './StyleSheet';
 import FormHandling from './FormHandling';
 import MoutingLifeCycleA from './LifeCycle_Methods/MoutingLifeCycleA';
 import ParentRegComp from './PureComp/ParentRegComp';
+import MemoParentComp from './Memo/MemoParentComp';
 
 function App() {
   return (
@@ -30,7 +31,8 @@ function App() {
       {/* <StyleSheet/> */}
       {/* <FormHandling/> */}
       {/* <MoutingLifeCycleA/> */}
-      <ParentRegComp/>
+      {/* <ParentRegComp/> */}
+      <MemoParentComp/>
     </div>
   );
 }
