@@ -15,6 +15,7 @@ import FormHandling from './FormHandling';
 import MoutingLifeCycleA from './LifeCycle_Methods/MoutingLifeCycleA';
 import ParentRegComp from './PureComp/ParentRegComp';
 import MemoParentComp from './Memo/MemoParentComp';
+import Refs from './Refs/Refs';
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
       {/* <FormHandling/> */}
       {/* <MoutingLifeCycleA/> */}
       {/* <ParentRegComp/> */}
-      <MemoParentComp/>
+      {/* <MemoParentComp/> */}
+      <Refs/>
     </div>
   );
 }
