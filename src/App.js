@@ -16,6 +16,12 @@ import MoutingLifeCycleA from './LifeCycle_Methods/MoutingLifeCycleA';
 import ParentRegComp from './PureComp/ParentRegComp';
 import MemoParentComp from './Memo/MemoParentComp';
 import Refs from './Refs/Refs';
+import { ParentRefComp } from './Forwarding-Refs/ParentRefComp';
+import Portals from './Portals/Portals'
+import Hero from './ErrorBoundary/Hero';
+import ErrorBoundry from './ErrorBoundary/ErrorBoundry';
+import ClickCounter from './HOC/ClickCounter';
+import HoverCounter from './HOC/HoverCounter';
 
 function App() {
   return (
@@ -34,7 +40,21 @@ function App() {
       {/* <MoutingLifeCycleA/> */}
       {/* <ParentRegComp/> */}
       {/* <MemoParentComp/> */}
-      <Refs/>
+      {/* <Refs/> */}
+      {/* <ParentRefComp/> */}
+      {/* <Portals/> */}
+      {/* <ErrorBoundry >
+      <Hero hname="sanket"/>
+      </ErrorBoundry>
+      <ErrorBoundry>
+      <Hero hname="Mangesh"/>
+      </ErrorBoundry>
+      <ErrorBoundry>
+      <Hero hname="Zende"/>
+      </ErrorBoundry> */}
+
+      <ClickCounter />
+      <HoverCounter />
     </div>
   );
 }
