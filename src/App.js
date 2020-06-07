@@ -22,6 +22,9 @@ import Hero from './ErrorBoundary/Hero';
 import ErrorBoundry from './ErrorBoundary/ErrorBoundry';
 import ClickCounter from './HOC/ClickCounter';
 import HoverCounter from './HOC/HoverCounter';
+import ClickCounterRP from './RenderProps/ClickCounterRP';
+import HoverCounterRP from './RenderProps/HoverCounterRP';
+import CounterRP from './RenderProps/CounterRP';
 
 function App() {
   return (
@@ -43,9 +46,9 @@ function App() {
       {/* <Refs/> */}
       {/* <ParentRefComp/> */}
       {/* <Portals/> */}
-      {/* <ErrorBoundry >
-      <Hero hname="sanket"/>
-      </ErrorBoundry>
+      {/* <ErrorBoundry >*/}
+      {/* <Hero hname="sanket"/> */}
+      {/* </ErrorBoundry>
       <ErrorBoundry>
       <Hero hname="Mangesh"/>
       </ErrorBoundry>
@@ -53,8 +56,12 @@ function App() {
       <Hero hname="Zende"/>
       </ErrorBoundry> */}
 
-      <ClickCounter />
-      <HoverCounter />
+      {/* <ClickCounter />
+      <HoverCounter /> */}
+      {/* <Counter /> */}
+
+      <CounterRP render={(count , incCount) => <ClickCounterRP count={count} incCount={incCount} />} />
+      <CounterRP render={(count , incCount) => <HoverCounterRP count={count} incCount={incCount} />} />
     </div>
   );
 }

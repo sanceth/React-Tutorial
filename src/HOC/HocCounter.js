@@ -18,7 +18,7 @@ const HocCounter = (WrappedComponent) => {
 
         render() {
             const {count} = this.state
-            return <WrappedComponent count={count} incrementCount={this.incrementCount}/>
+            return <WrappedComponent count={count} incrementCount={this.incrementCount} {...this.props}/>
         }
     }
     return HocCounters
