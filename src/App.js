@@ -25,6 +25,8 @@ import HoverCounter from './HOC/HoverCounter';
 import ClickCounterRP from './RenderProps/ClickCounterRP';
 import HoverCounterRP from './RenderProps/HoverCounterRP';
 import CounterRP from './RenderProps/CounterRP';
+import ComponentA from './Context/ComponentA';
+import {UserProvider} from './Context/context'
 
 function App() {
   return (
@@ -60,8 +62,11 @@ function App() {
       <HoverCounter /> */}
       {/* <Counter /> */}
 
-      <CounterRP render={(count , incCount) => <ClickCounterRP count={count} incCount={incCount} />} />
-      <CounterRP render={(count , incCount) => <HoverCounterRP count={count} incCount={incCount} />} />
+      {/* <CounterRP render={(count , incCount) => <ClickCounterRP count={count} incCount={incCount} />} />
+      <CounterRP render={(count , incCount) => <HoverCounterRP count={count} incCount={incCount} />} /> */}
+      <UserProvider value="sanket">
+        <ComponentA />
+      </UserProvider>
     </div>
   );
 }
