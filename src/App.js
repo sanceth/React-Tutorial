@@ -28,6 +28,7 @@ import CounterRP from './RenderProps/CounterRP';
 import ComponentA from './Context/ComponentA';
 import {UserProvider} from './Context/context'
 import HooksCounter from './Hooks/HooksCounter';
+import PrevStateHook from './Hooks/PrevStateHook';
 
 function App() {
   return (
@@ -68,7 +69,8 @@ function App() {
       {/* <UserProvider value="sanket">
         <ComponentA />
       </UserProvider> */}
-      <HooksCounter/>
+      {/* <HooksCounter/> */}
+      <PrevStateHook/>
     </div>
   );
 }
