@@ -29,6 +29,7 @@ import ComponentA from './Context/ComponentA';
 import {UserProvider} from './Context/context'
 import HooksCounter from './Hooks/HooksCounter';
 import PrevStateHook from './Hooks/PrevStateHook';
+import StateHookObj from './Hooks/StateHookObj';
 
 function App() {
   return (
@@ -70,7 +71,8 @@ function App() {
         <ComponentA />
       </UserProvider> */}
       {/* <HooksCounter/> */}
-      <PrevStateHook/>
+      {/* <PrevStateHook/> */}
+      <StateHookObj />
     </div>
   );
 }
