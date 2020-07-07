@@ -30,6 +30,7 @@ import {UserProvider} from './Context/context'
 import HooksCounter from './Hooks/HooksCounter';
 import PrevStateHook from './Hooks/PrevStateHook';
 import StateHookObj from './Hooks/StateHookObj';
+import StateHookArr from './Hooks/StateHookArr';
 
 function App() {
   return (
@@ -72,7 +73,8 @@ function App() {
       </UserProvider> */}
       {/* <HooksCounter/> */}
       {/* <PrevStateHook/> */}
-      <StateHookObj />
+      {/* <StateHookObj /> */}
+      <StateHookArr/>
     </div>
   );
 }
