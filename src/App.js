@@ -31,6 +31,7 @@ import HooksCounter from './Hooks/HooksCounter';
 import PrevStateHook from './Hooks/PrevStateHook';
 import StateHookObj from './Hooks/StateHookObj';
 import StateHookArr from './Hooks/StateHookArr';
+import UseEffectRender from './Hooks/UseEffectHook/UseEffectRender';
 
 function App() {
   return (
@@ -74,7 +75,8 @@ function App() {
       {/* <HooksCounter/> */}
       {/* <PrevStateHook/> */}
       {/* <StateHookObj /> */}
-      <StateHookArr/>
+      {/* <StateHookArr/> */}
+      <UseEffectRender ></UseEffectRender>
     </div>
   );
 }
