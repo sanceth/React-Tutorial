@@ -34,6 +34,7 @@ import StateHookArr from './Hooks/StateHookArr';
 import UseEffectRender from './Hooks/UseEffectHook/UseEffectRender';
 import UseEffectCleanUp from './Hooks/UseEffectHook/UseEffectCleanUp';
 import CleanupContainer from './Hooks/UseEffectHook/CleanupContainer';
+import FetchDataUseEffect from './Hooks/UseEffectHook/FetchDataUseEffect';
 
 function App() {
   return (
@@ -80,7 +81,8 @@ function App() {
       {/* <StateHookArr/> */}
       {/* <UseEffectRender ></UseEffectRender> */}
       {/* <UseEffectCleanUp/> */}
-      <CleanupContainer/>
+      {/* <CleanupContainer/> */}
+      <FetchDataUseEffect/>
     </div>
   );
 }
