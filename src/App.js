@@ -32,6 +32,8 @@ import PrevStateHook from './Hooks/PrevStateHook';
 import StateHookObj from './Hooks/StateHookObj';
 import StateHookArr from './Hooks/StateHookArr';
 import UseEffectRender from './Hooks/UseEffectHook/UseEffectRender';
+import UseEffectCleanUp from './Hooks/UseEffectHook/UseEffectCleanUp';
+import CleanupContainer from './Hooks/UseEffectHook/CleanupContainer';
 
 function App() {
   return (
@@ -76,7 +78,9 @@ function App() {
       {/* <PrevStateHook/> */}
       {/* <StateHookObj /> */}
       {/* <StateHookArr/> */}
-      <UseEffectRender ></UseEffectRender>
+      {/* <UseEffectRender ></UseEffectRender> */}
+      {/* <UseEffectCleanUp/> */}
+      <CleanupContainer/>
     </div>
   );
 }
