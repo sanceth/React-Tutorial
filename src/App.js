@@ -26,7 +26,7 @@ import ClickCounterRP from './RenderProps/ClickCounterRP';
 import HoverCounterRP from './RenderProps/HoverCounterRP';
 import CounterRP from './RenderProps/CounterRP';
 import ComponentA from './Context/ComponentA';
-import {UserProvider} from './Context/context'
+import { UserProvider } from './Context/context'
 import HooksCounter from './Hooks/HooksCounter';
 import PrevStateHook from './Hooks/PrevStateHook';
 import StateHookObj from './Hooks/StateHookObj';
@@ -35,6 +35,12 @@ import UseEffectRender from './Hooks/UseEffectHook/UseEffectRender';
 import UseEffectCleanUp from './Hooks/UseEffectHook/UseEffectCleanUp';
 import CleanupContainer from './Hooks/UseEffectHook/CleanupContainer';
 import FetchDataUseEffect from './Hooks/UseEffectHook/FetchDataUseEffect';
+import ComponentX from './Hooks/UseContextHook/ComponentX';
+import UseContextHook from './Hooks/UseContextHook/UseContextHook';
+
+export const StudentContext = React.createContext()
+export const TeacherContext = React.createContext()
+
 
 function App() {
   return (
@@ -82,7 +88,13 @@ function App() {
       {/* <UseEffectRender ></UseEffectRender> */}
       {/* <UseEffectCleanUp/> */}
       {/* <CleanupContainer/> */}
-      <FetchDataUseEffect/>
+      {/* <FetchDataUseEffect/> */}
+      <StudentContext.Provider value={"sanket"}>
+        <TeacherContext.Provider value={"Jagtap Sir"}>
+          <ComponentX />
+        </TeacherContext.Provider>
+      </StudentContext.Provider>
+      {/* <UseContextHook/> */}
     </div>
   );
 }
