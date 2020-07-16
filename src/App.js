@@ -37,6 +37,8 @@ import CleanupContainer from './Hooks/UseEffectHook/CleanupContainer';
 import FetchDataUseEffect from './Hooks/UseEffectHook/FetchDataUseEffect';
 import ComponentX from './Hooks/UseContextHook/ComponentX';
 import UseContextHook from './Hooks/UseContextHook/UseContextHook';
+import CounterWithReducer from './Hooks/UseReducerHook/CounterWithReducer';
+import CounterWithReducerObj from './Hooks/UseReducerHook/CounterWithReducerObj';
 
 export const StudentContext = React.createContext()
 export const TeacherContext = React.createContext()
@@ -81,6 +83,9 @@ function App() {
       {/* <UserProvider value="sanket">
         <ComponentA />
       </UserProvider> */}
+
+      {/* hooks */}
+
       {/* <HooksCounter/> */}
       {/* <PrevStateHook/> */}
       {/* <StateHookObj /> */}
@@ -89,12 +94,14 @@ function App() {
       {/* <UseEffectCleanUp/> */}
       {/* <CleanupContainer/> */}
       {/* <FetchDataUseEffect/> */}
-      <StudentContext.Provider value={"sanket"}>
+      {/* <StudentContext.Provider value={"sanket"}>
         <TeacherContext.Provider value={"Jagtap Sir"}>
           <ComponentX />
         </TeacherContext.Provider>
-      </StudentContext.Provider>
+      </StudentContext.Provider> */}
       {/* <UseContextHook/> */}
+      {/* <CounterWithReducer /> */}
+      <CounterWithReducerObj />
     </div>
   );
 }
