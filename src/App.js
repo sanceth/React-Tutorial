@@ -39,6 +39,7 @@ import ComponentX from './Hooks/UseContextHook/ComponentX';
 import UseContextHook from './Hooks/UseContextHook/UseContextHook';
 import CounterWithReducer from './Hooks/UseReducerHook/CounterWithReducer';
 import CounterWithReducerObj from './Hooks/UseReducerHook/CounterWithReducerObj';
+import MultipleReducer from './Hooks/UseReducerHook/MultipleReducer';
 
 export const StudentContext = React.createContext()
 export const TeacherContext = React.createContext()
@@ -101,7 +102,8 @@ function App() {
       </StudentContext.Provider> */}
       {/* <UseContextHook/> */}
       {/* <CounterWithReducer /> */}
-      <CounterWithReducerObj />
+      {/* <CounterWithReducerObj /> */}
+      <MultipleReducer />
     </div>
   );
 }
