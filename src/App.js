@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Greet from './Components/Greet';
@@ -40,12 +40,27 @@ import UseContextHook from './Hooks/UseContextHook/UseContextHook';
 import CounterWithReducer from './Hooks/UseReducerHook/CounterWithReducer';
 import CounterWithReducerObj from './Hooks/UseReducerHook/CounterWithReducerObj';
 import MultipleReducer from './Hooks/UseReducerHook/MultipleReducer';
+import ComponentARC from './Hooks/UseReducerHook/ReducerWithContext/ComponentARC';
 
 export const StudentContext = React.createContext()
 export const TeacherContext = React.createContext()
 
+const initialState = 0;
+const reducer = (state, action) => {
+    // return newState;
+    switch (action) {
+        case 'inc':
+            return state + 1;
+        case 'dec':
+            return state - 1;
+        case 'res':
+            return initialState
+    }
+}
+
 
 function App() {
+  const [count, dispatch] = useReducer(reducer, initialState)
   return (
     <div className="App">
       {/* <Greet name="Sanket" lname="Zende" ></Greet>
@@ -103,7 +118,10 @@ function App() {
       {/* <UseContextHook/> */}
       {/* <CounterWithReducer /> */}
       {/* <CounterWithReducerObj /> */}
-      <MultipleReducer />
+      {/* <MultipleReducer /> */}
+      <StudentContext.Provider value={{ countState: count, countDispatch: dispatch }}>
+        <ComponentARC />
+      </StudentContext.Provider>
     </div>
   );
 }
