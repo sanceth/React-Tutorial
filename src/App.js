@@ -41,6 +41,7 @@ import CounterWithReducer from './Hooks/UseReducerHook/CounterWithReducer';
 import CounterWithReducerObj from './Hooks/UseReducerHook/CounterWithReducerObj';
 import MultipleReducer from './Hooks/UseReducerHook/MultipleReducer';
 import ComponentARC from './Hooks/UseReducerHook/ReducerWithContext/ComponentARC';
+import ParentContainer from './Hooks/UseCallbackHook/ParentContainer';
 
 export const StudentContext = React.createContext()
 export const TeacherContext = React.createContext()
@@ -119,9 +120,11 @@ function App() {
       {/* <CounterWithReducer /> */}
       {/* <CounterWithReducerObj /> */}
       {/* <MultipleReducer /> */}
-      <StudentContext.Provider value={{ countState: count, countDispatch: dispatch }}>
+      {/* <StudentContext.Provider value={{ countState: count, countDispatch: dispatch }}>
         <ComponentARC />
-      </StudentContext.Provider>
+      </StudentContext.Provider> */}
+
+      <ParentContainer />
     </div>
   );
 }
